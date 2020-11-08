@@ -13,11 +13,13 @@ public class CatHouseTest {
     @Test
     public void addTest() {
         // given
-        Cat expected = new Cat();
+        Cat expected = new Cat(null, null, 1);
         Integer id = expected.getId();
 
-        // when
         CatHouse.add(expected);
+
+        // when
+
         Cat actual = CatHouse.getCatById(id);
 
         // then
@@ -77,9 +79,6 @@ public class CatHouseTest {
 
         // then
         Assert.assertEquals(expected, actual);
-
-
-
 
     }
 }
